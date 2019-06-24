@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <!-- <h3 class="section-header">Staff</h3> -->
+        <h3 class="section-header">Staff</h3>
       </div>
     </div>
 
