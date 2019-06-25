@@ -1,5 +1,5 @@
 <div class="article">
-  
+
 
   <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
@@ -10,21 +10,21 @@
     'order' => 'DESC'
   );
 
-  query_posts($ffive); 
- 
-    ?>
+  query_posts($ffive);
 
-  <? get_template_part('templates/components/grareporter, 'header'); ?>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-9">
+  ?>
 
-      <?php get_template_part('templates/layouts/archive', 'loop'); ?>
+  <?php get_template_part('templates/components/grareporter', 'header'); ?>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-9">
 
-    </div>
+        <?php get_template_part('templates/layouts/archive', 'loop'); ?>
 
-    <div class="col-md-3 col-lg-push-1 sidebar">
-      <?php get_template_part('templates/components/sidebar', 'grareporter'); ?>
+      </div>
+
+      <div class="col-md-3 col-lg-push-1 sidebar">
+        <?php get_template_part('templates/components/sidebar', 'grareporter'); ?>
+      </div>
     </div>
   </div>
-</div>
