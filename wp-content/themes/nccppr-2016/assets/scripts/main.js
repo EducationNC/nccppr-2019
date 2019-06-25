@@ -9,7 +9,6 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
-
 (function($) {
   // Determine trigger for touch/click events
   var clickortap;
@@ -19,8 +18,12 @@
     clickortap = 'click';
   }
 
+
   // Init popovers
   $('[data-toggle="popover"]').popover();
+
+  // JQuery Version
+ console.log($().jquery);
 
   // Check for mobile or IE
   var ismobileorIE = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|MSIE|Trident|Edge/i.test(navigator.userAgent);
@@ -94,6 +97,7 @@
 
         // Add special class to default WP embeds
         $('iframe.wp-embedded-content').not('[src*="/flash-cards/"]').closest('.entry-content-asset').addClass('wp-embed');
+        console.log ("hey there!");
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -259,6 +263,8 @@
           }
         });
 
+
+
         // Chapters Affix
         $(window).on('load', function() {
           $('#chapters .nav').affix({
@@ -295,6 +301,7 @@
         /**
          * Bootstrap Affix
          */
+		/*
         $(window).on('load', function() {
           $('#fc-left-nav .toc').affix({
             offset: {
@@ -306,12 +313,16 @@
               }
             }
           });
-        });
+        }); */
       },
       finalize: function() {
         /**
          * OWL CAROUSEL 2
          */
+
+        // Init Owl Carousel 2
+        var owl = $("#fc-carousel");
+
         // Function to set hash based on navigation link clicks
         $('#fc-left-nav a').on('click', function(e) {
           e.preventDefault();
@@ -356,19 +367,19 @@
           $('#fc-left-nav .toc').find('a[href="#' + hash + '"]').parent('li').addClass('active');
         }
 
-        // Init Owl Carousel 2
-        var owl = $("#fc-carousel");
+		$(window).on('load', function() {
+			setTimeout(function(){
+			  owl.owlCarousel({
+				items: 1,
+				loop: false,
+				autoHeight: true,
+				URLhashListener: true,
+				startPosition: 'URLHash',
+				onInitialized: navState
+			  });
+		  }, 2000);
+		});
 
-        $(window).on('load', function() {
-          owl.owlCarousel({
-            items: 1,
-            // loop: true,
-            autoHeight: true,
-            URLhashListener: true,
-            startPosition: 'URLHash',
-            onInitialized: navState
-          });
-        });
 
         // Manual carousel nav
         $('.fc-nav .fc-next').on(clickortap, function() {
@@ -425,5 +436,7 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+
+  $('#gform_wrapper_6').css("display","block");
 
 })(jQuery); // Fully reference jQuery after this point.
