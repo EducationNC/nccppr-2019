@@ -14,15 +14,3 @@
     </div>
   </div>
 </div> -->
-
-<div class="container juicer">
-  <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
-  <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-  <ul class="juicer-feed" data-feed-id="NCCPPR"><h1 class="referral"><a href="http://www.juicer.io">Powered by Juicer</a></h1></ul>
-</div>
-
-<div class="follow-buttons text-center">
-  <h3>See more and follow NCCPPR on:</h3>
-  <a href="https://www.facebook.com/NCCPPR" target="_blank"><span class="icon-facebook"></span></a>
-  <a href="https://www.twitter.com/NCCPPR" target="_blank"><span class="icon-twitter"></span></a>
-  </div>
