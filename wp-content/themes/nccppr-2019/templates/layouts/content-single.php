@@ -95,7 +95,7 @@ while (have_posts()) : the_post();
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-centered">
-                  <div class="h1"><?php echo $banner_name; ?></div>
+                  <div class="h1"><?php// echo $banner_name; ?></div>
                   <?php if ($author_avatar) { ?>
                     <div class="avatar hidden-xs">
                       <img src="<?php echo $author_avatar_sized['url']; ?>" alt="<?php the_author(); ?>" />
